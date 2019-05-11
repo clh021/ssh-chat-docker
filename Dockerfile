@@ -9,6 +9,7 @@ FROM debian:latest
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
+RUN apt-get update && apt-get install openssh-client -y && apt-get clean
 
 COPY --from=0 /ssh-chat/ssh-chat /ssh-chat
 
