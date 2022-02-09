@@ -13,13 +13,13 @@ $ ssh-keygen -t rsa -b 4096 -N '' -f ./ssh-chat-key
 Run the docker image:
 
 ```
-$ docker run -p 2022:2022 -v /ssh-chat-key:/ssh_key marcoslater/ssh-chat:latest
+$ docker run -p 2022:2022 -v /ssh-chat-key:/ssh_key leehom/ssh-chat:latest
 ```
 
 You may supply additional arguments to the image, example:
 
 ```
-$ docker run -p 22:22 -v /ssh-chat-key:/ssh_key marcoslater/ssh-chat:latest --bind ":22"
+$ docker run -p 22:22 -v /ssh-chat-key:/ssh_key leehom/ssh-chat:latest --bind ":22"
 ```
 
 # Development
